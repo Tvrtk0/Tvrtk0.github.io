@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rubik's cube tutorial - Tvrtko </title>
+  <link rel="shortcut icon" href="img/iconlogo.png">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Marko One' rel='stylesheet'>
+
+  <link rel="stylesheet" href="font-awesome-animation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="owl.theme.default.min.css">
+
+  <script src="jquery.min.js"></script>
+  <script src="owl.carousel.js"></script>
+
+</head>
+<body style="background-color:#151515;font-family:Marko One" onmousewheel="active('')">
+
+
+<nav class="navbar-inverse">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <img src="img/logo.png" style="width: 100px; float: left;margin-top:4px; ">
+    <a class="navbar-brand" href="#" style="color: #D8D8D8"><strong>CUBE</strong></a>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>     
+  </div>
+
+    <ul class="nav navbar-nav navbar-collapse collapse navbar-center" id="nav">
+      <li><a  class="border" style="color: #D8D8D8;">TUTORIAL</a></li>
+      <li><a href="#" class="navbar-color">SHOP</a></li>
+      <li><a href="#">VIDEOS</a></li>
+      <li><a href="#" >ALGORITHMS</a></li>
+      <li><a href="#" >COMPETING</a></li>
+    </ul>    
+
+    
+
+</div>
+</nav>
+
+<div id="navbar">
+  <div style="margin-left: 30px;">
+    <span onclick="return false;" onmousedown="resetScroller('nav');" class="glyphicon glyphicon glyphicon-upload" id="myBtn">
+      <a href="#"></a></span>
+    <ul class="progressbar">
+      <li id="1notation"  onmousedown="autoScrollTo('notation');">
+        <strong>NOTATION</strong></li>
+
+      <li id="2cross"  onmousedown="autoScrollTo('cross');">
+         <strong>CROSS</strong></li>
+
+      <li id="3f2l"  onmousedown="autoScrollTo('F2L');onclickActive('F2L')">
+       <strong>F2L</strong></li>
+
+      <li id="4oll"  onmousedown="autoScrollTo('oll');onclickActive('oll')">
+       <strong>OLL</strong></li>
+
+      <li id="5pll"  onmousedown="autoScrollTo('pll');onclickActive('pll')">
+       <strong>PLL</strong></li>
+    </ul>  
+
+  </div>
+</div>
+
+<div class="container-fluid walle" id="walle"></div>  
+
+<div class="container-fluid" id="notation">
+<div class="container">
+    <h1 style="font-family: 'Caveat Brush';">Rubik's Cube Notation</h1>
+    <img src="img/line1.png" style="width: 100%;height: 3px;">
+    <p>We use letters to describe a rotation on the cube. Learn to read the Rubik's Cube Notation and you'll be able to perform all algorithms you see in the solution tutorials. The good news is that learning only six intuitive letters is sufficient to solve the cube but if you are a speedcuber you should learn the advanced notation which you can access from this page.<br>e.g. F denotes the bottom layer in clockwise direction and Fi (or F ' ) denotes the bottom layer in counter clockwise direction.
+    </p>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="img/R.png"></div>
+        <div class="item"><img src="img/Ri.png"></div>
+        <div class="item"><img src="img/L.png"></div>
+        <div class="item"><img src="img/Li.png"></div>
+        <div class="item"><img src="img/U.png"></div>
+        <div class="item"><img src="img/Ui.png"></div>
+        <div class="item"><img src="img/D.png"></div>
+        <div class="item"><img src="img/Di.png"></div>
+        <div class="item"><img src="img/F.png"></div>
+        <div class="item"><img src="img/Fi.png"></div>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid" id="cross">
+    <div class="container">
+        <h1 style="font-family: 'Caveat Brush';">White cross</h1>
+        <img src="img/line1.png" style="width: 100%;height: 3px;">
+        <p>Let's begin with the white face. First we have to make a white cross paying attention to the color of the side center pieces. This step is quite intuitive because there are no solved pieces to watch out for. You can do this for sure with a little practice. Just move the white edges to their places not messing up the ones already fixed.</p>
+        
+        <div class="col-xs-8 col-xs-offset-2" id="crossexample">
+        <div class="col-sm-6"><img src="img/goodcross.svg"><p>Good white cross</p></div>
+        <div class="col-sm-6"><img src="img/badcross.svg"><p>Sides not matching</p></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="F2L">
+    <div class="container">
+        <h1 style="font-family: 'Caveat Brush';">F2L - First Two Layers</h1>
+        <img src="img/line1.png" style="width: 100%;height: 3px;">
+        <h2 style="font-family: 'Caveat Brush';">White corners</h2>
+
+        <p>In this step we have to arrange all the white corner pieces to finish the first face. This step is still intuitive, you can do it without learning a single algorithm. If you don't have patience I'll give you some clue.<br>
+        Move the white corner under the spot where it's supposed to be, then do one of the three algorithms according to the orientation of the piece, aka. in which direction the white sticker is facing. If the white corner piece is where it belongs but turned wrong then first you have to pop it out.</p>
+
+      <div class="col-xs-10 col-xs-offset-1" id="corners-example">
+        <div class="col-lg-4"><img src="img/corners1.png" class="corners-example img"></div>
+        <div class="col-lg-4"><img src="img/corners2.png" class="corners-example img"></div>
+        <div class="col-lg-4"><img src="img/corners3.png" class="corners-example img"></div>
+        <div style="text-align: center;"><img src="img/corners4.png" class="corners-example img"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 style="font-family: 'Caveat Brush'; margin-top: 100px;">Second Layer</h2>
+      <p>Until this point the procedure was pretty straight forward but from now on we have to use algorithms. We can forget the completed white face so let's turn the cube upside down to focus on the unsolved side.<br>
+      In this step we are completing the first two layers (F2L). There are two symmetric algorithms we have to use in this step. They're called the Right and Left algorithms. These algorithms insert the Up-Front edge piece from the top layer in the middle layer not messing up the solved white face. See the images below:</p>
+
+      <div class="col-xs-10 col-xs-offset-1" id="corners-example">
+        <div class="col-lg-6"><img src="img/2layer1.png" class="corners-example img"></div>
+        <div class="col-lg-6"><img src="img/2layer2.png" class="corners-example img"></div>
+        <p>If an edge piece is on its place in the second layer orienting wrong then we have to apply the algorithm twice. First we must pop it out inserting another one in its place.</p>
+        <div class="col-lg-12" style="text-align: center;width: 100%;"><img src="img/2layer3.png" class="corners-example img">
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid" id="oll">
+  <div class="container">
+    <h1 style="font-family: 'Caveat Brush';">OLL - Orient Last Layer</h1>
+    <img src="img/line1.png" style="width: 100%;height: 3px;">
+
+    <div id="yellowcross" class="row">
+      <div class="col-md-6">
+        <h2 style="font-family: 'Caveat Brush';">Yellow Cross</h2>
+        <p>Sart solving the last layer making a yellow cross on the top of the cube. It doesn't matter if the pieces are not on their final places so we don't have to pay attention to the colors of the sides.<br>
+        We can get three possible patterns on the top. Use this algorithm to go from one state to the other: </p><br>
+        <p>When you see a dot you have to apply the algorithm three times. If you have a yellow "L" shape then onlye twice, holding the cube in your hands as seen on the image. In case of a horizontal line you just have to execute the permutation once</p>
+      </div>
+
+      <div class="col-md-6" style="text-align: center;">
+        <br><br>
+        <img src="img/oll.png" style="width: 100%;">
+        <p style="font-size: 25px"><br><strong>F R U R' U' F'</strong></p>
+        <img src="img/yellowcross.svg" style="width: 100%; height: 70px;">
+        <p>Yellow cross done</p>
+      </div>
+    </div>
+
+    <div id="yellowedges" class="row">
+      <div class="col-md-6">
+        <h2 style="font-family: 'Caveat Brush';">Yellow Edges</h2>
+        <p>After making the yellow cross on the top of the cube you have to put the yellow edge pieces on their final places to match the colors of the side center pieces. Switch the front and left yellow edges with the following algorithm:
+        <br>( You might face a situation when you have to apply this algorithm more than once. ) </p>
+      </div>
+      <div class="col-md-6" style="text-align: center;">
+        <br><br>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/yellowedges.svg" style="width: 100%;height: 100px;">
+            <p>Switch the edges</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/yedges.svg" style="width: 100%; height: 100px;">
+            <p>Yellow edges done</p>
+          </div>
+        </div>
+        <p style="font-size: 25px"><br><strong>R U R' U R U2 R' U</strong></p>
+      </div>
+    </div>
+
+    <br><br><br><br>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="pll">
+  <div class="container">
+    <h1 style="font-family: 'Caveat Brush';">PLL - Permutate the Last Layer</h1>
+    <img src="img/line1.png" style="width: 100%;height: 3px;">
+    <div class="col-md-6">
+      <h2 style="font-family: 'Caveat Brush';">Yellow corners on their places</h2>
+      <p>Only the last layer corners are left unsolved. First we have to get them to the right spot, so don't worry about the orientation in this step.<br>Find a piece which is already on the right place, move it to the right-front-top corner then apply the following algorithm to switch (cycle) the three wrong pieces marked on the image.</p>
+      <p>Do this twice to do an inverse rotation of the pieces. If none of the yellow corners is on the right place then execute the algorithm once to get a good piece.</p>
+    </div>
+
+    <div class="col-md-6" style="text-align: center;">
+      <br><br><br><br>
+      <img src="img/yellowcorners.svg" style="width: 100%;height: 120px;">
+      <p>Switch three corner pieces</p>
+      <p style="font-size: 25px;text-align: center;"><br><strong>U R U' L' U R' U' L</strong></p>
+      <br><br><br><br><br><br><br><br>
+
+    </div>      
+
+    <div>
+      <h2 style="font-family: 'Caveat Brush';">Orient Yellow Corners</h2>
+      <p>All pieces are on their right places you just have to orient the yellow corner pieces to finish the puzzle. This proved to be the most complicated step so read the instructions carefully.</p>  
+      
+      <div class="col-md-6" style="text-align: center;">
+        <img src="img/yellowcorners1.svg" style="width: 100%;height: 180px;">
+        <p>Orient the corner pieces</p>
+      </div>
+      <div class="col-md-6" style="text-align: center;">
+        <img src="img/yellowcorners2.svg" style="width: 100%;height: 180px;">
+        <p>The cube is solved</p>
+      </div>
+      
+      <p>Hold the cube in your hand with an unsolved corner on the front-right-top corner, then do the algorithm below twice or four times until that specific piece is oriented well: </p>
+      <p style="font-size: 25px;text-align: center;""><br><strong>R' D' R D</strong></p>
+      <p>It seems like you messed up the whole cube but don't worry, it will be all right when all the corner pieces are oriented. Turn the top layer only to move another unsolved yellow piece to the front-right-top corner of the cube and do the same R' D' R D again until this specific piece is ok. Be careful not to move the two bottom layers between the algorithms and <strong>never rotate the whole cube!</strong><br>
+      You are so close to the end so be careful because this is the step in this tutorial where most people get lost.</p>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<footer id="footer">
+  
+  <h4 style="padding-top: 80px; border-top: 4px solid #aaa;">Follow us:</h4>
+  <div class="social row">
+    <a href=""></a>
+    <a href="#" style="color: #4867AA;"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+    <a href="#" style="color: #d34836;"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    <a href="#" style="color: #aaa;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" style="color: #FE1515;"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+    <a href="#" style="color: #1DA1F2;"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+  </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
